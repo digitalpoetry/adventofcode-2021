@@ -1,11 +1,11 @@
 from aocd.models import Puzzle
 
 
-def part1(input_data: str) -> None:
+def part1(input_data: str):
     pass
 
 
-def part2(input_data: str) -> None:
+def part2(input_data: str):
     pass
 
 

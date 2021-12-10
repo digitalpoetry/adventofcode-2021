@@ -1,10 +1,10 @@
 from itertools import pairwise
-from typing import Tuple
+from typing import Tuple, Generator
 
 from aocd.models import Puzzle
 
 
-def triplewise(iterable) -> Tuple:
+def triplewise(iterable) -> Generator[Tuple, None, None]:
     """
     Return overlapping triplets from an iterable.
     triplewise('ABCDEFG') -> ABC BCD CDE DEF EFG

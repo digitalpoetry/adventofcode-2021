@@ -36,8 +36,8 @@ def part2(input_data: str) -> int:
     current_position = Position()
     aim = 0
     for line in input_data.splitlines():
-        command, scalar = line.split()
-        scalar = int(scalar)
+        command, param = line.split()
+        scalar = int(param)
         if command == 'down':
             aim += scalar
         elif command == 'up':

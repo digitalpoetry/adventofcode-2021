@@ -9,6 +9,7 @@ advent-of-code-data = "*"
 [dev-packages]
 pytest = "*"
 yapf = "*"
+mypy = "*"
 
 [requires]
 python_version = "3.10"
