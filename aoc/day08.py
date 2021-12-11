@@ -46,8 +46,45 @@ def part1(input_data: str) -> int:
 
 
 def part2(input_data: str) -> int:
-    _ = parse(input_data)
-    raise NotImplementedError
+    notes = parse(input_data)
+    total = 0
+    for entry in notes.entries:
+        patterns = [set(sp) for sp in entry.signal_patterns]
+        outputs = [set(o) for o in entry.outputs]
+
+        # Length-unique digits can be identified immediately
+        one = next((p for p in patterns if len(p) == 2))
+        seven = next((p for p in patterns if len(p) == 3))
+        four = next((p for p in patterns if len(p) == 4))
+        eight = next((p for p in patterns if len(p) == 7))
+
+        decoded: List[str] = []
+        for o in outputs:
+            if o == one:
+                decoded.append('1')
+            elif o == seven:
+                decoded.append('7')
+            elif o == four:
+                decoded.append('4')
+            elif o == eight:
+                decoded.append('8')
+            elif len(o) == 5 and len(o & four) == 2:
+                decoded.append('2')
+            elif len(o) == 5 and len(o & seven) == 3:
+                decoded.append('3')
+            elif len(o) == 5 and len(o & four) == 3 and len(o & one) == 1:
+                decoded.append('5')
+            elif len(o) == 6 and len(o & four) == 4:
+                decoded.append('9')
+            elif len(o) == 6 and len(o & four) == 3 and len(o & one) == 1:
+                decoded.append('6')
+            elif len(o) == 6 and len(o & four) == 3 and len(o & one) == 2:
+                decoded.append('0')
+            else:
+                raise ValueError('Unable to decode signal pattern to digit.')
+        total += int(''.join(decoded))
+
+    return total
 
 
 if __name__ == '__main__':
