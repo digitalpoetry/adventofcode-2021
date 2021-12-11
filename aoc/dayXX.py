@@ -1,12 +1,12 @@
 from aocd.models import Puzzle
 
 
-def part1(input_data: str):
-    pass
+def part1(input_data: str) -> int:
+    return 0
 
 
-def part2(input_data: str):
-    pass
+def part2(input_data: str) -> int:
+    return 0
 
 
 if __name__ == '__main__':
