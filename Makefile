@@ -12,5 +12,5 @@ format:
 
 .PHONY: lint
 lint:
-	pipenv run yapf --recursive --diff ./aoc ./tests
 	pipenv run mypy --ignore-missing-imports ./aoc
+	pipenv run yapf --recursive --diff ./aoc ./tests

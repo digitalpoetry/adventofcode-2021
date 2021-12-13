@@ -1,10 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module type="PYTHON_MODULE" version="4">
+  <component name="CheckStyle-IDEA-Module">
+    <option name="configuration">
+      <map />
+    </option>
+  </component>
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$">
-      <excludeFolder url="file://$MODULE_DIR$/.venv" />
+      <sourceFolder url="file://$MODULE_DIR$/aoc" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/tests" isTestSource="false" />
     </content>
-    <orderEntry type="jdk" jdkName="Python 3.10 (adventofcode-2021) (2)" jdkType="Python SDK" />
+    <orderEntry type="jdk" jdkName="Pipenv (adventofcode-2021)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
   <component name="PyDocumentationSettings">
